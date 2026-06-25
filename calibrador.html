@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calibrador de coordenadas</title>
+    <link rel="stylesheet" href="src/styles.css">
+  </head>
+  <body>
+    <header class="compact-header">
+      <div class="wrap header-row">
+        <a class="secondary-link" href="index.html">Inicio</a>
+        <a class="secondary-link" href="game.html?juego=tubulo-seminifero">Ver ejemplo</a>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="game-intro">
+        <p class="eyebrow">Herramienta auxiliar</p>
+        <h1>Calibrador de coordenadas</h1>
+        <p class="lead">
+          Carga una imagen de <code>assets/images</code> y haz clic sobre ella para obtener coordenadas en porcentaje.
+        </p>
+      </section>
+
+      <section class="calibrator-tools">
+        <label>
+          Ruta de imagen
+          <input id="image-path" list="image-options" type="text" value="assets/images/tubulo-seminifero-placeholder.svg">
+          <datalist id="image-options">
+            <option value="assets/images/tubulo-seminifero-placeholder.svg"></option>
+          </datalist>
+        </label>
+        <button id="load-image" class="button" type="button">Cargar imagen</button>
+        <label class="toggle">
+          <input id="grid-toggle" type="checkbox">
+          Mostrar cuadricula
+        </label>
+      </section>
+
+      <section class="calibrator-output" aria-live="polite">
+        <label>
+          Coordenadas
+          <input id="coords-output" type="text" readonly value="left: --%; top: --%">
+        </label>
+        <button id="copy-coords" class="button secondary" type="button">Copiar</button>
+        <span id="copy-feedback" class="muted"></span>
+      </section>
+
+      <section class="calibrator-stage-wrap">
+        <div id="calibrator-stage" class="calibrator-stage">
+          <img id="calibrator-image" alt="Imagen para calibrar">
+          <span id="calibrator-marker" class="calibrator-marker" hidden></span>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const pathInput = document.querySelector("#image-path");
+      const loadButton = document.querySelector("#load-image");
+      const gridToggle = document.querySelector("#grid-toggle");
+      const stage = document.querySelector("#calibrator-stage");
+      const image = document.querySelector("#calibrator-image");
+      const marker = document.querySelector("#calibrator-marker");
+      const output = document.querySelector("#coords-output");
+      const copyButton = document.querySelector("#copy-coords");
+      const copyFeedback = document.querySelector("#copy-feedback");
+
+      function loadImage() {
+        marker.hidden = true;
+        image.src = pathInput.value.trim();
+      }
+
+      loadButton.addEventListener("click", loadImage);
+      pathInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") loadImage();
+      });
+
+      gridToggle.addEventListener("change", () => {
+        stage.classList.toggle("with-grid", gridToggle.checked);
+      });
+
+      stage.addEventListener("click", (event) => {
+        if (!image.complete || image.naturalWidth === 0) return;
+        const rect = image.getBoundingClientRect();
+        if (
+          event.clientX < rect.left ||
+          event.clientX > rect.right ||
+          event.clientY < rect.top ||
+          event.clientY > rect.bottom
+        ) {
+          return;
+        }
+
+        const left = ((event.clientX - rect.left) / rect.width) * 100;
+        const top = ((event.clientY - rect.top) / rect.height) * 100;
+        const leftText = left.toFixed(2);
+        const topText = top.toFixed(2);
+
+        output.value = `"left": ${leftText}, "top": ${topText}`;
+        marker.style.left = `${leftText}%`;
+        marker.style.top = `${topText}%`;
+        marker.hidden = false;
+        copyFeedback.textContent = "";
+      });
+
+      copyButton.addEventListener("click", async () => {
+        output.select();
+        try {
+          await navigator.clipboard.writeText(output.value);
+          copyFeedback.textContent = "Copiado.";
+        } catch (error) {
+          document.execCommand("copy");
+          copyFeedback.textContent = "Copiado.";
+        }
+      });
+
+      loadImage();
+    </script>
+  </body>
+</html>

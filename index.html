@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Juegos de histologia</title>
+    <link rel="stylesheet" href="src/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <p class="eyebrow">Histologia interactiva</p>
+        <h1>Juegos de arrastrar etiquetas</h1>
+        <p class="lead">
+          Practica la identificacion de estructuras histologicas colocando cada etiqueta en su zona correcta.
+        </p>
+      </div>
+    </header>
+
+    <main class="wrap main-layout">
+      <section aria-labelledby="games-title">
+        <div class="section-heading">
+          <h2 id="games-title">Juegos disponibles</h2>
+          <a class="secondary-link" href="calibrador.html">Abrir calibrador</a>
+        </div>
+        <div id="games-list" class="games-grid" aria-live="polite">
+          <p class="muted">Cargando juegos...</p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const list = document.querySelector("#games-list");
+
+      async function loadGames() {
+        try {
+          const response = await fetch("data/juegos.json", { cache: "no-store" });
+          if (!response.ok) throw new Error("No se pudo cargar data/juegos.json");
+          const games = await response.json();
+
+          if (!Array.isArray(games) || games.length === 0) {
+            list.innerHTML = '<p class="muted">Todavia no hay juegos publicados.</p>';
+            return;
+          }
+
+          list.innerHTML = games.map((game) => `
+            <article class="game-card">
+              <div>
+                <h3>${escapeHtml(game.titulo || game.id)}</h3>
+                <p>${escapeHtml(game.descripcion || "Juego interactivo de histologia.")}</p>
+              </div>
+              <a class="button" href="game.html?juego=${encodeURIComponent(game.id)}">Jugar</a>
+            </article>
+          `).join("");
+        } catch (error) {
+          list.innerHTML = `
+            <div class="notice error">
+              No se pudo cargar el listado. Revisa que <code>data/juegos.json</code> exista y tenga JSON valido.
+            </div>
+          `;
+        }
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
+      loadGames();
+    </script>
+  </body>
+</html>

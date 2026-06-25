@@ -1,0 +1,57 @@
+{
+  "titulo": "Tubulo seminifero",
+  "instrucciones": "Arrastra cada etiqueta hacia la zona que corresponda en la imagen. Algunas estructuras pueden repetirse en distintos lugares.",
+  "imagen": "assets/images/tubulo-seminifero-placeholder.svg",
+  "etiquetas": [
+    {
+      "id": "espermatogonia-1",
+      "texto": "Espermatogonia"
+    },
+    {
+      "id": "espermatogonia-2",
+      "texto": "Espermatogonia"
+    },
+    {
+      "id": "espermatocito",
+      "texto": "Espermatocito primario"
+    },
+    {
+      "id": "luz",
+      "texto": "Luz del tubulo"
+    }
+  ],
+  "zonas": [
+    {
+      "id": "zona-espermatogonia-1",
+      "left": 28,
+      "top": 68,
+      "ancho": 18,
+      "alto": 10,
+      "respuesta": "espermatogonia-1"
+    },
+    {
+      "id": "zona-espermatogonia-2",
+      "left": 69,
+      "top": 70,
+      "ancho": 18,
+      "alto": 10,
+      "respuesta": "espermatogonia-2"
+    },
+    {
+      "id": "zona-espermatocito",
+      "left": 38,
+      "top": 42,
+      "ancho": 22,
+      "alto": 12,
+      "respuesta": "espermatocito"
+    },
+    {
+      "id": "zona-luz",
+      "left": 54,
+      "top": 24,
+      "ancho": 20,
+      "alto": 13,
+      "respuesta": "luz"
+    }
+  ]
+}

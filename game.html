@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Juego de histologia</title>
+    <link rel="stylesheet" href="src/styles.css">
+  </head>
+  <body>
+    <header class="compact-header">
+      <div class="wrap header-row">
+        <a class="secondary-link" href="index.html">Volver</a>
+        <a class="secondary-link" href="calibrador.html">Calibrador</a>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="game-intro">
+        <p class="eyebrow">Juego interactivo</p>
+        <h1 id="game-title">Cargando...</h1>
+        <p id="game-instructions" class="lead"></p>
+      </section>
+
+      <section id="status-panel" class="status-panel" aria-live="polite">
+        <span id="progress-text">0/0 completadas</span>
+        <span id="feedback-text">Arrastra una etiqueta a la imagen.</span>
+      </section>
+
+      <section class="play-layout" aria-label="Area de juego">
+        <aside class="labels-panel">
+          <div class="panel-heading">
+            <h2>Etiquetas</h2>
+            <button id="reset-button" class="button secondary" type="button">Reiniciar</button>
+          </div>
+          <div id="labels-list" class="labels-list"></div>
+        </aside>
+
+        <div class="image-panel">
+          <div id="image-stage" class="image-stage">
+            <img id="game-image" alt="">
+            <div id="drop-zones"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="src/game.js"></script>
+  </body>
+</html>

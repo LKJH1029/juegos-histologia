@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Imagen placeholder de tubulo seminifero</title>
+  <desc id="desc">Diagrama simple usado para probar el juego mientras se reemplaza por una microfotografia real.</desc>
+  <rect width="900" height="620" fill="#f3f0df"/>
+  <ellipse cx="450" cy="310" rx="330" ry="245" fill="#f8d8c7" stroke="#985b4a" stroke-width="18"/>
+  <ellipse cx="450" cy="270" rx="152" ry="105" fill="#fff7e8" stroke="#c69073" stroke-width="8"/>
+  <g fill="#875044" opacity="0.92">
+    <circle cx="250" cy="422" r="34"/>
+    <circle cx="628" cy="432" r="34"/>
+    <circle cx="342" cy="270" r="43"/>
+    <circle cx="555" cy="352" r="36"/>
+    <circle cx="398" cy="452" r="27"/>
+    <circle cx="505" cy="442" r="25"/>
+    <circle cx="664" cy="286" r="28"/>
+    <circle cx="236" cy="286" r="28"/>
+  </g>
+  <g fill="#bf7464" opacity="0.72">
+    <circle cx="312" cy="360" r="23"/>
+    <circle cx="584" cy="238" r="22"/>
+    <circle cx="444" cy="390" r="24"/>
+    <circle cx="520" cy="210" r="20"/>
+    <circle cx="372" cy="190" r="19"/>
+  </g>
+  <path d="M250 145 C352 72 554 68 655 148" fill="none" stroke="#d9a18b" stroke-width="20" stroke-linecap="round" opacity="0.45"/>
+  <text x="450" y="580" fill="#68433c" font-family="Arial, Helvetica, sans-serif" font-size="28" text-anchor="middle">
+    Placeholder: reemplazar por imagen histologica real
+  </text>
+</svg>
