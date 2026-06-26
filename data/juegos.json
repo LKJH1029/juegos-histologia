@@ -3,5 +3,10 @@
     "id": "tubulo-seminifero",
     "titulo": "Tubulo seminifero",
     "descripcion": "Ubica estructuras basicas de un tubulo seminifero en una imagen de ejemplo."
+  },
+  {
+    "id": "coclea",
+    "titulo": "Identificación: Cóclea",
+    "descripcion": "Ubica las principales estructuras de la cóclea en una imagen histológica."
   }
 ]

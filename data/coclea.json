@@ -1,0 +1,236 @@
+{
+  "titulo": "Identificación: Cóclea",
+  "instrucciones": "Arrastra cada etiqueta hacia la zona que corresponda en la imagen. Las coordenadas son provisionales y deben ajustarse con el calibrador.",
+  "imagen": "assets/images/coclea.jpg",
+  "etiquetas": [
+    {
+      "id": "rampa-vestibular",
+      "texto": "Rampa vestibular",
+      "match": "rampa-vestibular"
+    },
+    {
+      "id": "membrana-reissner",
+      "texto": "Membrana de Reissner",
+      "match": "membrana-reissner"
+    },
+    {
+      "id": "rampa-coclear",
+      "texto": "Rampa coclear",
+      "match": "rampa-coclear"
+    },
+    {
+      "id": "estria-vascular",
+      "texto": "Estría vascular",
+      "match": "estria-vascular"
+    },
+    {
+      "id": "ligamento-espiral",
+      "texto": "Ligamento espiral",
+      "match": "ligamento-espiral"
+    },
+    {
+      "id": "membrana-tectoria",
+      "texto": "Membrana tectoria",
+      "match": "membrana-tectoria"
+    },
+    {
+      "id": "organo-corti",
+      "texto": "Órgano de Corti",
+      "match": "organo-corti"
+    },
+    {
+      "id": "membrana-basilar",
+      "texto": "Membrana basilar",
+      "match": "membrana-basilar"
+    },
+    {
+      "id": "limbo-espiral",
+      "texto": "Limbo espiral",
+      "match": "limbo-espiral"
+    },
+    {
+      "id": "ganglio-espiral",
+      "texto": "Ganglio espiral",
+      "match": "ganglio-espiral"
+    },
+    {
+      "id": "rampa-timpanica",
+      "texto": "Rampa timpánica",
+      "match": "rampa-timpanica"
+    },
+    {
+      "id": "tejido-oseo",
+      "texto": "Tejido óseo",
+      "match": "tejido-oseo"
+    },
+    {
+      "id": "epitelio",
+      "texto": "Epitelio",
+      "match": "epitelio"
+    },
+    {
+      "id": "capilares",
+      "texto": "Capilares",
+      "match": "capilares"
+    },
+    {
+      "id": "tejido-oseo-lamina-espiral",
+      "texto": "Tejido óseo (lámina espiral)",
+      "match": "tejido-oseo-lamina-espiral"
+    },
+    {
+      "id": "tejido-oseo-modiolo",
+      "texto": "Tejido óseo (modiolo)",
+      "match": "tejido-oseo-modiolo"
+    }
+  ],
+  "zonas": [
+    {
+      "id": "zona-rampa-vestibular",
+      "left": 42,
+      "top": 10.5,
+      "ancho": 14,
+      "alto": 5,
+      "match": "rampa-vestibular",
+      "respuesta": "rampa-vestibular"
+    },
+    {
+      "id": "zona-membrana-reissner",
+      "left": 32.86,
+      "top": 21.18,
+      "ancho": 14,
+      "alto": 5,
+      "match": "membrana-reissner",
+      "respuesta": "membrana-reissner"
+    },
+    {
+      "id": "zona-rampa-coclear",
+      "left": 36.97,
+      "top": 38.24,
+      "ancho": 14,
+      "alto": 5,
+      "match": "rampa-coclear",
+      "respuesta": "rampa-coclear"
+    },
+    {
+      "id": "zona-estria-vascular",
+      "left": 22.81,
+      "top": 35.56,
+      "ancho": 11,
+      "alto": 2,
+      "match": "estria-vascular",
+      "compacto": true,
+      "respuesta": "estria-vascular"
+    },
+    {
+      "id": "zona-ligamento-espiral",
+      "left": 24.63,
+      "top": 69.24,
+      "ancho": 9,
+      "alto": 6,
+      "match": "ligamento-espiral",
+      "respuesta": "ligamento-espiral"
+    },
+    {
+      "id": "zona-membrana-tectoria",
+      "left": 39.17,
+      "top": 46.63,
+      "ancho": 14,
+      "alto": 5,
+      "match": "membrana-tectoria",
+      "respuesta": "membrana-tectoria"
+    },
+    {
+      "id": "zona-organo-corti",
+      "left": 34.6,
+      "top": 52.46,
+      "ancho": 14,
+      "alto": 5,
+      "match": "organo-corti",
+      "respuesta": "organo-corti"
+    },
+    {
+      "id": "zona-membrana-basilar",
+      "left": 48.22,
+      "top": 72.09,
+      "ancho": 14,
+      "alto": 5,
+      "match": "membrana-basilar",
+      "respuesta": "membrana-basilar"
+    },
+    {
+      "id": "zona-limbo-espiral",
+      "left": 58.55,
+      "top": 38.24,
+      "ancho": 7,
+      "alto": 6,
+      "match": "limbo-espiral",
+      "respuesta": "limbo-espiral"
+    },
+    {
+      "id": "zona-ganglio-espiral",
+      "left": 78.56,
+      "top": 42.23,
+      "ancho": 12,
+      "alto": 5,
+      "match": "ganglio-espiral",
+      "respuesta": "ganglio-espiral"
+    },
+    {
+      "id": "zona-rampa-timpanica",
+      "left": 64.31,
+      "top": 85.45,
+      "ancho": 14,
+      "alto": 5,
+      "match": "rampa-timpanica",
+      "respuesta": "rampa-timpanica"
+    },
+    {
+      "id": "zona-tejido-oseo",
+      "left": 18.24,
+      "top": 80.90,
+      "ancho": 9,
+      "alto": 5,
+      "match": "tejido-oseo",
+      "respuesta": "tejido-oseo"
+    },
+    {
+      "id": "zona-epitelio",
+      "left": 21.70,
+      "top": 37.68,
+      "ancho": 8,
+      "alto": 2,
+      "match": "epitelio",
+      "compacto": true,
+      "respuesta": "epitelio"
+    },
+    {
+      "id": "zona-capilares",
+      "left": 21.75,
+      "top": 39.88,
+      "ancho": 8,
+      "alto": 2,
+      "match": "capilares",
+      "compacto": true,
+      "respuesta": "capilares"
+    },
+    {
+      "id": "zona-tejido-oseo-lamina-espiral",
+      "left": 74.18,
+      "top": 13.79,
+      "ancho": 14,
+      "alto": 6,
+      "match": "tejido-oseo-lamina-espiral",
+      "respuesta": "tejido-oseo-lamina-espiral"
+    },
+    {
+      "id": "zona-tejido-oseo-modiolo",
+      "left": 95.6,
+      "top": 37.39,
+      "ancho": 7.6,
+      "alto": 6.5,
+      "match": "tejido-oseo-modiolo",
+      "respuesta": "tejido-oseo-modiolo"
+    }
+  ]
+}

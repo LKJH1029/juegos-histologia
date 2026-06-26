@@ -75,12 +75,15 @@ function renderZones() {
   gameData.zonas.forEach((zone) => {
     const zoneEl = document.createElement("div");
     zoneEl.className = "drop-zone";
+    if (zone.compacto) {
+      zoneEl.classList.add("compact");
+    }
     zoneEl.dataset.zoneId = zone.id;
     zoneEl.dataset.match = getZoneMatch(zone);
     zoneEl.style.left = `${zone.left}%`;
     zoneEl.style.top = `${zone.top}%`;
-    zoneEl.style.width = `${zone.ancho}%`;
-    zoneEl.style.height = `${zone.alto}%`;
+    zoneEl.style.width = `${getZoneDimension(zone, "ancho", "width")}%`;
+    zoneEl.style.height = `${getZoneDimension(zone, "alto", "height")}%`;
     zoneEl.textContent = "?";
     zoneEl.setAttribute("aria-label", "Zona de caida");
 
@@ -117,6 +120,7 @@ function handleDrop(labelId, zone, zoneEl) {
   if (label && getLabelMatch(label) === getZoneMatch(zone)) {
     completedZones.add(zone.id);
     zoneEl.classList.add("correct");
+    zoneEl.classList.toggle("compact", Boolean(zone.compacto || label.compacto));
     zoneEl.textContent = getLabelText(labelId);
 
     const labelButton = labelsListEl.querySelector(`[data-label-id="${cssEscape(labelId)}"]`);
@@ -174,6 +178,10 @@ function getLabelMatch(label) {
 
 function getZoneMatch(zone) {
   return zone.match || zone.respuesta;
+}
+
+function getZoneDimension(zone, primaryKey, fallbackKey) {
+  return zone[primaryKey] ?? zone[fallbackKey];
 }
 
 function resetGame() {

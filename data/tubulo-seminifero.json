@@ -55,7 +55,7 @@
       "left": 13.31,
       "top": 15.49,
       "ancho": 10.55,
-      "alto": 2,
+      "alto": 5,
       "match": "celulas-leydig",
       "respuesta": "celulas-leydig"
     },
@@ -63,8 +63,8 @@
       "id": "zona-fibroblastos",
       "left": 13.48,
       "top": 24.88,
-      "ancho": 10.55,
-      "alto": 2,
+      "ancho": 10,
+      "alto": 4,
       "match": "fibroblastos",
       "respuesta": "fibroblastos"
     },
@@ -73,7 +73,7 @@
       "left": 14.76,
       "top": 35.12,
       "ancho": 11.2,
-      "alto": 2,
+      "alto": 5,
       "match": "celulas-sertoli-superior-izquierda",
       "respuesta": "celulas-sertoli-1"
     },
@@ -82,7 +82,7 @@
       "left": 90.08,
       "top": 22.60,
       "ancho": 10.55,
-      "alto": 2,
+      "alto": 5,
       "match": "espermatides",
       "respuesta": "espermatides"
     },
@@ -91,7 +91,7 @@
       "left": 90.36,
       "top": 37.11,
       "ancho": 12,
-      "alto": 2,
+      "alto": 6,
       "match": "espermatocitos-primarios",
       "respuesta": "espermatocitos-primarios"
     },
@@ -100,7 +100,7 @@
       "left": 91.18,
       "top": 61.28,
       "ancho": 13,
-      "alto": 2,
+      "alto": 5,
       "match": "espermatogonias",
       "respuesta": "espermatogonias"
     },
@@ -109,7 +109,7 @@
       "left": 62.31,
       "top": 93.70,
       "ancho": 13,
-      "alto": 2,
+      "alto": 5,
       "match": "lamina-propia",
       "respuesta": "lamina-propia"
     },
@@ -118,7 +118,7 @@
       "left": 26.55,
       "top": 92.14,
       "ancho": 12,
-      "alto": 2,
+      "alto": 5.2,
       "match": "miofibroblastos-fibroblastos",
       "respuesta": "miofibroblastos-fibroblastos"
     },
@@ -127,7 +127,7 @@
       "left": 89.72,
       "top": 77.35,
       "ancho": 12,
-      "alto": 2,
+      "alto": 5,
       "match": "celulas-sertoli-inferior-derecha",
       "respuesta": "celulas-sertoli-2"
     }
