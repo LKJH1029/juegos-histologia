@@ -76,7 +76,7 @@ function renderZones() {
     const zoneEl = document.createElement("div");
     zoneEl.className = "drop-zone";
     zoneEl.dataset.zoneId = zone.id;
-    zoneEl.dataset.answer = zone.respuesta;
+    zoneEl.dataset.match = getZoneMatch(zone);
     zoneEl.style.left = `${zone.left}%`;
     zoneEl.style.top = `${zone.top}%`;
     zoneEl.style.width = `${zone.ancho}%`;
@@ -113,7 +113,8 @@ function renderZones() {
 function handleDrop(labelId, zone, zoneEl) {
   if (completedZones.has(zone.id)) return;
 
-  if (labelId === zone.respuesta) {
+  const label = getLabel(labelId);
+  if (label && getLabelMatch(label) === getZoneMatch(zone)) {
     completedZones.add(zone.id);
     zoneEl.classList.add("correct");
     zoneEl.textContent = getLabelText(labelId);
@@ -160,7 +161,19 @@ function setFeedback(message, type, temporary) {
 }
 
 function getLabelText(labelId) {
-  return gameData.etiquetas.find((label) => label.id === labelId)?.texto || labelId;
+  return getLabel(labelId)?.texto || labelId;
+}
+
+function getLabel(labelId) {
+  return gameData.etiquetas.find((label) => label.id === labelId);
+}
+
+function getLabelMatch(label) {
+  return label.match || label.id;
+}
+
+function getZoneMatch(zone) {
+  return zone.match || zone.respuesta;
 }
 
 function resetGame() {

@@ -1,57 +1,135 @@
 {
-  "titulo": "Tubulo seminifero",
-  "instrucciones": "Arrastra cada etiqueta hacia la zona que corresponda en la imagen. Algunas estructuras pueden repetirse en distintos lugares.",
-  "imagen": "assets/images/tubulo-seminifero-placeholder.svg",
+  "titulo": "Túbulo seminífero",
+  "instrucciones": "Arrastra cada etiqueta hacia la zona que corresponda en la imagen. Ajusta las coordenadas de cada zona con el calibrador si es necesario.",
+  "imagen": "assets/images/tubulo-seminifero.jpg",
   "etiquetas": [
     {
-      "id": "espermatogonia-1",
-      "texto": "Espermatogonia"
+      "id": "celulas-leydig",
+      "texto": "Céls. de Leydig",
+      "match": "celulas-leydig"
     },
     {
-      "id": "espermatogonia-2",
-      "texto": "Espermatogonia"
+      "id": "fibroblastos",
+      "texto": "Fibroblastos",
+      "match": "fibroblastos"
     },
     {
-      "id": "espermatocito",
-      "texto": "Espermatocito primario"
+      "id": "celulas-sertoli-1",
+      "texto": "Céls. de Sertoli",
+      "match": "celulas-sertoli-superior-izquierda"
     },
     {
-      "id": "luz",
-      "texto": "Luz del tubulo"
+      "id": "espermatides",
+      "texto": "Espermátides",
+      "match": "espermatides"
+    },
+    {
+      "id": "espermatocitos-primarios",
+      "texto": "Espermatocitos primarios",
+      "match": "espermatocitos-primarios"
+    },
+    {
+      "id": "espermatogonias",
+      "texto": "Espermatogonias",
+      "match": "espermatogonias"
+    },
+    {
+      "id": "lamina-propia",
+      "texto": "Lámina propia",
+      "match": "lamina-propia"
+    },
+    {
+      "id": "miofibroblastos-fibroblastos",
+      "texto": "Miofibroblastos / Fibroblastos",
+      "match": "miofibroblastos-fibroblastos"
+    },
+    {
+      "id": "celulas-sertoli-2",
+      "texto": "Cél. de Sertoli",
+      "match": "celulas-sertoli-inferior-derecha"
     }
   ],
   "zonas": [
     {
-      "id": "zona-espermatogonia-1",
-      "left": 28,
-      "top": 68,
-      "ancho": 18,
-      "alto": 10,
-      "respuesta": "espermatogonia-1"
+      "id": "zona-celulas-leydig",
+      "left": 13.31,
+      "top": 15.49,
+      "ancho": 10.55,
+      "alto": 2,
+      "match": "celulas-leydig",
+      "respuesta": "celulas-leydig"
     },
     {
-      "id": "zona-espermatogonia-2",
-      "left": 69,
-      "top": 70,
-      "ancho": 18,
-      "alto": 10,
-      "respuesta": "espermatogonia-2"
+      "id": "zona-fibroblastos",
+      "left": 13.48,
+      "top": 24.88,
+      "ancho": 10.55,
+      "alto": 2,
+      "match": "fibroblastos",
+      "respuesta": "fibroblastos"
     },
     {
-      "id": "zona-espermatocito",
-      "left": 38,
-      "top": 42,
-      "ancho": 22,
-      "alto": 12,
-      "respuesta": "espermatocito"
+      "id": "zona-celulas-sertoli-1",
+      "left": 14.76,
+      "top": 35.12,
+      "ancho": 11.2,
+      "alto": 2,
+      "match": "celulas-sertoli-superior-izquierda",
+      "respuesta": "celulas-sertoli-1"
     },
     {
-      "id": "zona-luz",
-      "left": 54,
-      "top": 24,
-      "ancho": 20,
-      "alto": 13,
-      "respuesta": "luz"
+      "id": "zona-espermatides",
+      "left": 90.08,
+      "top": 22.60,
+      "ancho": 10.55,
+      "alto": 2,
+      "match": "espermatides",
+      "respuesta": "espermatides"
+    },
+    {
+      "id": "zona-espermatocitos-primarios",
+      "left": 90.36,
+      "top": 37.11,
+      "ancho": 12,
+      "alto": 2,
+      "match": "espermatocitos-primarios",
+      "respuesta": "espermatocitos-primarios"
+    },
+    {
+      "id": "zona-espermatogonias",
+      "left": 91.18,
+      "top": 61.28,
+      "ancho": 13,
+      "alto": 2,
+      "match": "espermatogonias",
+      "respuesta": "espermatogonias"
+    },
+    {
+      "id": "zona-lamina-propia",
+      "left": 62.31,
+      "top": 93.70,
+      "ancho": 13,
+      "alto": 2,
+      "match": "lamina-propia",
+      "respuesta": "lamina-propia"
+    },
+    {
+      "id": "zona-miofibroblastos-fibroblastos",
+      "left": 26.55,
+      "top": 92.14,
+      "ancho": 12,
+      "alto": 2,
+      "match": "miofibroblastos-fibroblastos",
+      "respuesta": "miofibroblastos-fibroblastos"
+    },
+    {
+      "id": "zona-celulas-sertoli-2",
+      "left": 89.72,
+      "top": 77.35,
+      "ancho": 12,
+      "alto": 2,
+      "match": "celulas-sertoli-inferior-derecha",
+      "respuesta": "celulas-sertoli-2"
     }
   ]
 }

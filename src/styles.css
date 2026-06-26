@@ -272,10 +272,11 @@ h3 {
 
 .drop-zone {
   position: absolute;
-  display: grid;
+  display: flex;
   min-width: 44px;
   min-height: 32px;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
   border: 2px dashed rgba(15, 118, 110, 0.75);
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.52);
@@ -296,6 +297,14 @@ h3 {
   border-color: var(--success);
   background: rgba(218, 242, 226, 0.94);
   color: var(--success);
+  font-size: 0.62rem;
+  hyphens: auto;
+  line-height: 1.05;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  padding: 1px 3px;
+  white-space: normal;
+  word-break: normal;
 }
 
 .notice {
