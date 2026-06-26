@@ -1,6 +1,6 @@
 {
   "titulo": "Túbulo seminífero",
-  "instrucciones": "Arrastra cada etiqueta hacia la zona que corresponda en la imagen. Ajusta las coordenadas de cada zona con el calibrador si es necesario.",
+  "instrucciones": "Arrastra cada etiqueta hacia la zona que corresponda en la imagen.",
   "imagen": "assets/images/tubulo-seminifero.jpg",
   "etiquetas": [
     {

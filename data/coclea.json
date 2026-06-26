@@ -1,6 +1,6 @@
 {
   "titulo": "Identificación: Cóclea",
-  "instrucciones": "Arrastra cada etiqueta hacia la zona que corresponda en la imagen. Las coordenadas son provisionales y deben ajustarse con el calibrador.",
+  "instrucciones": "Coloca cada estructura histológica en el recuadro correcto.",
   "imagen": "assets/images/coclea.jpg",
   "etiquetas": [
     {

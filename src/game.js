@@ -26,12 +26,12 @@ async function init() {
     instructionsEl.innerHTML = `No se pudo cargar <code>data/${escapeHtml(gameId)}.json</code>.`;
     labelsListEl.innerHTML = "";
     zonesEl.innerHTML = "";
-    setFeedback("Revisa el parametro ?juego= y el archivo JSON correspondiente.", "error", false);
+    setFeedback("Revisa el parámetro ?juego= y el archivo JSON correspondiente.", "error", false);
   }
 }
 
 function renderGame() {
-  document.title = `${gameData.titulo} | Juegos de histologia`;
+  document.title = `${gameData.titulo} | Juegos de histología`;
   titleEl.textContent = gameData.titulo;
   instructionsEl.textContent = gameData.instrucciones;
   imageEl.src = gameData.imagen;
@@ -85,7 +85,7 @@ function renderZones() {
     zoneEl.style.width = `${getZoneDimension(zone, "ancho", "width")}%`;
     zoneEl.style.height = `${getZoneDimension(zone, "alto", "height")}%`;
     zoneEl.textContent = "?";
-    zoneEl.setAttribute("aria-label", "Zona de caida");
+    zoneEl.setAttribute("aria-label", "Zona de caída");
 
     zoneEl.addEventListener("dragover", (event) => {
       if (completedZones.has(zone.id)) return;
